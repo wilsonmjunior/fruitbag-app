@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "fruitbag-app",
+    "slug": "fruitbag-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "fruitbag-app"
+}
