@@ -3,6 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as Print from 'expo-print';
 import { shareAsync } from 'expo-sharing';
 
+import { ScreenProp } from '../../routes/Screens';
 import { useShippingBag } from '../../contexts/bag';
 import { usePrice } from '../../hooks/usePrice';
 import { Button } from '../../components/Button';
@@ -46,12 +47,12 @@ export function Checkout() {
     </html>
   `;
 
-  const { goBack } = useNavigation();
+  const { navigate } = useNavigation<ScreenProp>();
   const [loading, setLoading] = useState(false);
 
-  const { bag } = useShippingBag();
+  const { bag, handleBuy } = useShippingBag();
 
-  const { priceFormatted: total } = usePrice({ price: bag.total });
+  const { priceFormatted: total } = usePrice({ price: bag?.total });
 
   const handleSave = useCallback(async () => {
     setLoading(true);
@@ -61,16 +62,17 @@ export function Checkout() {
     });
 
     await shareAsync(uri, { UTI: '.pdf', mimeType: 'application/pdf' });
+  }, [html]);
 
-    goBack();
-
-    setLoading(false);
-  }, [goBack, html]);
+  const handleClose = useCallback(async () => {
+    await handleBuy();
+    navigate('Home');
+  }, [handleBuy, navigate]);
 
   return (
     <Container>
       <IconCloseWrapper>
-        <IconClose onPress={goBack} />
+        <IconClose onPress={handleClose} />
       </IconCloseWrapper>
 
       <Content>

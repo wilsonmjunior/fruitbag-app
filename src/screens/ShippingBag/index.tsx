@@ -27,7 +27,6 @@ export function ShippingBag() {
     bag,
     handleIncrement,
     handleDecrement,
-    handleBuy,
   } = useShippingBag();
 
   const { user } = useAuth();
@@ -43,7 +42,6 @@ export function ShippingBag() {
   const handleCheckout = useCallback(async () => {
     if (bag.products && bag.products.length > 0) {
       if (user.id) {
-        await handleBuy();
         navigate('Checkout');
       } else {
         navigate('SignIn');
@@ -51,7 +49,7 @@ export function ShippingBag() {
     } else {
       Alert.alert('Seu carrinho está vazio');
     }
-  }, [bag, user, handleBuy, navigate]);
+  }, [bag, user, navigate]);
 
   return (
     <GradientView>

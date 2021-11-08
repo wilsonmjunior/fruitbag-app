@@ -113,6 +113,7 @@ export function ShippingBagProvider({ children }: ShippingBagProviderProps) {
 
   const handleBuy = useCallback(async () => {
     await saveBuy();
+    setBag({} as Bag);
   }, [saveBuy]);
 
   const amountProduct = useCallback(async (productId: number) => {
