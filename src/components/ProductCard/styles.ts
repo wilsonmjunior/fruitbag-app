@@ -1,18 +1,24 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
-import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import { RFValue } from 'react-native-responsive-fontsize';
 import Feather from 'react-native-vector-icons/Feather';
+import {
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
 export const Container = styled.TouchableOpacity`
-  width: ${RFPercentage(22)}px;
-  height: ${RFPercentage(30)}px;
+  width: ${wp('43%')}px;
   border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.shape};
 
   margin-bottom: 14px;
 `;
 
-export const ProductImage = styled.Image``;
+export const ProductImage = styled.Image`
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+  width: 100%;
+`;
 
 export const Content = styled.View`
   padding: 16px;
