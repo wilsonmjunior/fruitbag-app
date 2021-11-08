@@ -5,7 +5,10 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "splash": {
+      "backgroundColor": "#E5EEEA"
+    }
   },
   "name": "fruitbag-app"
 }

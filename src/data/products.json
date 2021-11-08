@@ -1,0 +1,7 @@
+[
+  {"id": 1, "name": "Abacaxi", "description": "A banana", "price": 5.0 },
+  {"id": 2, "name": "Banana", "description": "A banana", "price": 6.0 },
+  {"id": 3, "name": "Maçâ", "description": "A banana", "price": 2.0 },
+  {"id": 4, "name": "Manga", "description": "A banana", "price": 10.0 },
+  {"id": 5, "name": "Pêra", "description": "A banana", "price": 10.0 }
+] 

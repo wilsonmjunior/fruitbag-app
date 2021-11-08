@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "John Doe", "email": "john@mail.com", "password": "123456", "image": "https://ecosdelacomunicacion.files.wordpress.com/2015/10/darth-vader-9.jpg" },
+  { "id": 2, "name": "Antonio Doe", "email": "antonio@mail.com", "password": "123456", "image": "http://s2.glbimg.com/DFMqlvcGrWqiKHJrKabQskXSoiY=/620x430/e.glbimg.com/og/ed/f/original/2012/03/15/jedi.jpg" }
+]
