@@ -3,6 +3,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export const InputWrapper = styled.View`
+  width: 100%;
   height: 54px;
   border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.shape};
@@ -22,5 +23,6 @@ export const Icon = styled(Feather)`
 `;
 
 export const InputContainer = styled.TextInput`
+  flex: 1;
   margin: 0 16px;
 `;
